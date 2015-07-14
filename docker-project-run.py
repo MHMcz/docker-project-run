@@ -27,6 +27,6 @@ for path in PATHS:
     compose = glob.glob(path + '/' + project + '/docker-compose.yml')
     if compose:
         projectDir = os.path.dirname(compose[0])
-        os.system('cd "' + projectDir + '" && docker-compose up')
+        os.system('cd "' + projectDir + '" && docker-compose up -d')
     else:
         print 'Project not found.'
